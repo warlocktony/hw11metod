@@ -1,19 +1,17 @@
 public class Main {
 
-
     public static void main(String[] args) {
-//        method for task 1
+
         chekLeapYear(403);
-//        method for task 2
+
         int os = 0;
         int year = 2013;
 
         showClientOs(os, year);
-//        method for task 3
+
         methodForTaskThree();
     }
 
-    //        TASK 1
     public static void chekLeapYear(int year) {
 
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
@@ -23,24 +21,24 @@ public class Main {
         }
     }
 
-//            TASK 2
-
     public static void showClientOs(int clientOs, int clientDeviceYear) {
 
+        int osIos = 0;
+        int osAndroid = 1;
+        int targetYear = 2015;
 
-        if (clientOs == 0 && clientDeviceYear <= 2014) {
+        if (clientOs == osIos && clientDeviceYear <= targetYear) {
             System.out.println("Install the lite version of the iOS app by following the link");
-        } else if (clientOs == 0 && clientDeviceYear >= 2015) {
+        } else if (clientOs == osIos && clientDeviceYear >= targetYear) {
             System.out.println("Install the IOS version of the app by following the link");
         }
-        if (clientOs == 1 && clientDeviceYear <= 2014) {
+        if (clientOs == osAndroid && clientDeviceYear <= targetYear) {
             System.out.println("Install the lite version of the Android app by following the link");
-        } else if (clientOs == 1 && clientDeviceYear >= 2015) {
+        } else if (clientOs == osAndroid && clientDeviceYear >= targetYear) {
             System.out.println("Install the Android version of the app by following the link");
         }
     }
 
-    //        TASK 3
     public static void methodForTaskThree() {
 
         int days = calculatedDeliveryDays(150);
@@ -69,7 +67,6 @@ public class Main {
         return deliveryDays;
 
     }
-
 }
 
 
